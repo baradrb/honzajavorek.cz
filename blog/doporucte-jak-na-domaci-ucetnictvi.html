@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="cs">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+        <title>Doporučte jak na domácí účetnictví - Javorové lístky</title>
+
+            <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css">
+            <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Slabo+13px:400,700&amp;subset=latin,latin-ext">
+
+        <link rel="stylesheet" href="http://honzajavorek.cz/theme/css/code.css">
+        <link rel="stylesheet" href="http://honzajavorek.cz/theme/css/main.css">
+            <link rel="stylesheet" href="http://honzajavorek.cz/theme/css/site.css">
+
+                <link rel="alternate" type="application/rss+xml" title="Javorové lístky - všechny články" href="http://honzajavorek.cz/feed.xml">
+                <link rel="alternate" type="application/rss+xml" title="Javorové lístky - všechny komentáře" href="http://javorove-listky.disqus.com/latest.rss">
+
+        <link rel="alternate" type="application/rss+xml" title="Javorové lístky – komentáře ke článku Doporučte jak na domácí účetnictví" href="http://javorove-listky.disqus.com/doporucte_jak_na_domaci_ucetnictvi/latest.rss">
+
+        <link rel="shortcut icon" type="image/x-icon" href="http://honzajavorek.cz/favicon.ico">
+
+        <meta name="twitter:card" content="summary">
+            <meta name="og:image" content="http://honzajavorek.cz/images/honza.jpg">
+    </head>
+    <body>
+        <div class="container article">
+<div class="site-navigation">
+    <a href="http://honzajavorek.cz/blog/" class="btn btn-primary">
+        <i class="fa fa-home"></i> Javorové lístky
+    </a>
+</div>
+
+<div class="article-container">
+    <div class="header">
+        <h1>Doporučte&nbsp;jak&nbsp;na domácí účetnictví</h1>
+        <p class="supressed">
+            <time datetime="2013-04-24T22:35:17+02:00" pubdate>04/24/13</time>
+            <br>
+            <a href="#about">Honza Javorek</a>
+        </p>
+    </div>
+
+    <div class="content">
+        <div><p>Pokud si chce člověk vést nějaké základní domácí účetnictví, má několik možností.</p>
+<ol><li>Vést si <strong>ručně psaný sešitek</strong> a vše si do něj zapisovat, pak to sčítat, apod.
+    Funguje, ale vyžaduje to hodně energie. Vhodné outsourcovat u manželky,
+    pokud ji máte, ale i tak musíte schovávat každý lístek z Billy a nechat
+    barmana zapisovat vám piva na hřbet ruky, abyste mohli provádět kvalitní
+    kolekci dat.</li>
+<li>Platit většinu věcí kartou, <strong>stahovat si výpisy z internetového bankovnictví</strong>
+    a cpát to do nějakého programu. Strávíte tři dny vybíráním programu, zavrhnete
+    <a href="http://www.smoneybox.com">ty online</a>, protože jsou pro USA, jsou moc jednoduché,
+    nebo prostě proto, že nechcete posílat informace o svých účtech nikam dál než
+    k vodnímu příkopu svého opancéřovaného domu. Zkusíte <a href="http://www.gnucash.org/">pár klasických</a>,
+    ale zjistíte, že mají 2000 tlačítek a 400 funkcí, z nichž jste pochopili jen křížek
+    v pravém horním rohu.</li>
+<li><strong>Vzdáte to</strong> a budete věřit svému třetímu oku a šestému smyslu. Už léta přece
+    dokážete i bez excelů, grafů a virgulí cítit vibrace svých peněžních toků a
+    na sekundu přesně poznáte moment, kdy byste si v baru už neměli dát dalších
+    osm Jamesonů, protože byste pak už nemuseli zaplatit zálohy sociálce za aktuální
+    měsíc. Když se jakožto mistr tesař náhodou utnete, vždy to nějak vyžehlíte metodou
+    <em>Not Giving a Fuck!</em></li>
+</ol><figure><iframe width="560" height="315" src="https://www.youtube.com/embed/6wS5xOZ7Rq8?rel=0" frameborder="0" allowfullscreen></iframe>
+
+</figure><p>Ujasnil jsem si, že od svého účetnictví chci těchto pár věcí. V nejlepším případě
+nechci vůbec nic navíc.</p>
+<ul><li>Umět <strong>načíst data z internetového bankovnictví</strong>. Klidně si napíšu skript, který
+    si to vezme z exportu nebo z <a href="http://www.fio.cz/bank-services/internetbanking-api">API</a>
+    (Fio, heč) a hodím ho do cronu, ale nehodlám řešit rozpoznávání položek
+    (např. sMoneybox položky nepáruje, klidně je naimportuje duplicitně) a jiné
+    záludnosti.</li>
+<li>Musí to být <strong>pružné</strong>. Když jeden měsíc nezaplatím nájem a ten další zaplatím
+    dva, musí být možnost nějak systému říct, aby jednu platbu započítal spíše
+    k tomu prvnímu měsíci, aby měla výsledná čísla smysl. Stejně tak aby mi
+    grafy nekazily průtokové platby, apod. Počítám s tím, že budou tyto úpravy
+    ruční, ale musí být možné.</li>
+<li>Zobrazit <strong>koláč výdajů podle typu</strong> - kolik utratím za jídlo, kolik za mobil,
+    kolik prohýřím v hospodě a co jde státu. Představuju si to tak, že nastavím
+    nějaké filtry na vstupní položky (jako v Gmailu), které mi je podle obsaženého textu
+    (<em>Billa</em>) zařadí do kategorie (<em>jídlo</em>). Tyto filtry budu postupně ladit, aby
+    odchytaly většinu věcí a ty 3 položky co propadnou si už nějak ručně zařadím.
+    Mohlo by to nějak v grafu zvýraznit "mandatorní" výdaje, které musím platit
+    každý měsíc, ale tohle beru jako úplný bonus. Kdyby to umělo podobně zobrazit i příjmy,
+    bylo by to taky fajn. Jako volnonožník mohu mít pestrou příjmovou stránku a
+    opět by se dalo i zvýrazňovat - tentokrát aby se odlišily pasivní a aktivní příjmy.</li>
+<li>Čáru, která když půjde v čase dolů, tak je to špatný a prodělávám. Když půjde
+    nahoru, je to dobrý a vydělávám. Zřejmě tedy nějaký <strong>graf závislosti zisku na čase</strong>.
+    Mělo by to být opět nějak odolné k případům, které mohou v realitě nastat - např.
+    když si odliju několik tisíc na spořící účet (a třeba nějak ručně takovou
+    položku označím jako interní přesun), nemělo by mi to ty peníze zřejmě
+    vůbec započítat jako výdaj a ukazovat v takovémto nějakém grafu.</li>
+<li>Kdyby byl ten systém úplně boží, doplnil bych do něj pár konstant podle
+    aktuálních zákonů a ukázal by mi k těm dvěma grafům ještě <strong>pár orientačních
+    čísel k příštímu daňovému přiznání</strong>. Nemusí mi jej vypočítat na korunu přesně,
+    spíš by mě jen tak orientačně zajímalo, zda mi v březnu vyjde na přehledu
+    pro sociálku úplně jiná částka než jakou jsem jim zaplatil na zálohách a čeká
+    mě třeba nějaké překvapní v podobě desetitisícového doplatku.</li>
+</ul><p>To je vše. Mám podezření, že by to ve své podstatě zvládl jakýkoliv tabulkový terminátor,
+ale moc mě nenapadá, jak jednoduše implementovat import položek, filtry na jejich
+utřízení, apod.</p>
+<p>Co byste mi doporučili? Jak řešíte své finance vy? Programujete při tom v nějakých
+obskurních frikulínských jazycích, jako třeba <a href="https://plus.google.com/u/0/111783114889748547827/posts/BZnsgkYdkA4">zde</a>?
+Myslíte, že existuje nějaký program, který mi ty tři věci dokáže zobrazit,
+aniž bych si při tom udělal manuální epilaci těla? Mám napsat do <a href="http://www.jic.cz/">JIC</a>,
+<a href="http://startupyard.cz/">Stártapjárdu</a> nebo na <a href="http://webtrh.cz/">Tywoetrh</a>,
+aby mi to natěšení klučíci za víkend zbouchali přesně podle mých představ?</p>
+<p>Předem děkuji za všechna doporučení! (A dodávám:
+Používám <a href="http://www.fio.cz/">Fio</a>, <a href="http://www.fakturoid.cz/">Fakturoid</a>,
+<a href="http://xubuntu.org/">Linux</a>, programuju v <a href="http://python.cz">Pythonu</a>, neštítím
+se nějak výrazně věcí jako Google Docs.)</p></div>
+    </div>
+
+        <hr>
+
+        <div id="about" class="about">
+            <h2 class="supressed">
+                    Honza Javorek
+            </h2>
+            <div class="about-box">
+                    <img src="http://honzajavorek.cz/images/honza.jpg" class="about-image img-rounded">
+                <div class="about-text">
+                    <p><a href="http://honzajavorek.cz">Honza</a> je programátor. Od roku 2011 buduje českou
+komunitu kolem jazyka <a href="http://python.cz/">Python</a>. V současnosti pomáhá hlavně s
+propagací aktivit, jako jsou <a href="http://pyladies.cz/">PyLadies</a>,
+<a href="http://pyvo.cz/">Pyvo</a>, nebo <a href="https://cz.pycon.org/">PyCon CZ</a>. Přes den jej
+najdete v <a href="https://apiary.io/">Apiary</a>, kde se stará o
+<a href="https://github.com/apiaryio/dredd">Dredd</a>, framework na testování API. Občas
+taky radí lidem jak mají API dělat a přednáší o tom na konferencích.</p>
+                </div>
+            </div>
+        </div>
+
+    <hr>
+
+    <div id="share" class="share">
+        <a href="//www.facebook.com/sharer.php?u=http%3A//honzajavorek.cz/blog/doporucte-jak-na-domaci-ucetnictvi&amp;t=Javorov%C3%A9%20l%C3%ADstky%3A%20Doporu%C4%8Dte%20jak%20na%20dom%C3%A1c%C3%AD%20%C3%BA%C4%8Detnictv%C3%AD" target="_blank" class="btn btn-primary-outline">
+            <i class="fa fa-facebook-square"></i> Facebook
+        </a>
+        <a href="//twitter.com/share?url=http%3A//honzajavorek.cz/blog/doporucte-jak-na-domaci-ucetnictvi&amp;text=Javorov%C3%A9%20l%C3%ADstky%3A%20Doporu%C4%8Dte%20jak%20na%20dom%C3%A1c%C3%AD%20%C3%BA%C4%8Detnictv%C3%AD" target="_blank" class="btn btn-info-outline">
+            <i class="fa fa-twitter-square"></i> Twitter
+        </a>
+    </div>
+
+        <hr>
+
+        <div class="article-comments" id="comments">
+            <div id="disqus_thread"></div>
+            <script>
+                var disqus_sitename = "javorove-listky";
+                var disqus_config = function () {
+                    this.page.identifier = "\/home\/travis\/build\/honzajavorek\/honzajavorek.cz\/content\/2013-04-24_doporucte-jak-na-domaci-ucetnictvi.md";
+                    this.page.title = "Doporu\u010dte jak na dom\u00e1c\u00ed \u00fa\u010detnictv\u00ed";
+                };
+                (function() {
+                    var d = document, s = d.createElement('script');
+                    s.src = '//' + disqus_sitename + '.disqus.com/embed.js';
+                    s.setAttribute('data-timestamp', +new Date());
+                    (d.head || d.body).appendChild(s);
+                })();
+            </script>
+            <noscript>
+                <p class="noscript">Bez JavaScriptu se komentáře nezobrazí.</p>
+            </noscript>
+        </div>
+</div>
+
+    <hr>
+
+    <div id="feeds" class="feeds">
+        <a href="http://javorove-listky.disqus.com/doporucte_jak_na_domaci_ucetnictvi/latest.rss" class="btn btn-primary-outline">
+            <i class="fa fa-feed"></i> Komentáře
+        </a>
+    </div>
+        </div>
+
+        <hr>
+
+        <div class="footer">
+            <p>© 2007—2016 <a href="http://honzajavorek.cz">Honza Javorek</a></p>
+        </div>
+
+        <script async src="//platform.twitter.com/widgets.js"></script>
+            <script>
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', "UA-1316071-6"]);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+    </body>
+</html>

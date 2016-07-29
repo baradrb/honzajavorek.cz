@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="cs">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+        <title>Tahák na syntaxi: PHP VS. Java - Javorové lístky</title>
+
+            <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css">
+            <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Slabo+13px:400,700&amp;subset=latin,latin-ext">
+
+        <link rel="stylesheet" href="http://honzajavorek.cz/theme/css/code.css">
+        <link rel="stylesheet" href="http://honzajavorek.cz/theme/css/main.css">
+            <link rel="stylesheet" href="http://honzajavorek.cz/theme/css/site.css">
+
+                <link rel="alternate" type="application/rss+xml" title="Javorové lístky - všechny články" href="http://honzajavorek.cz/feed.xml">
+                <link rel="alternate" type="application/rss+xml" title="Javorové lístky - všechny komentáře" href="http://javorove-listky.disqus.com/latest.rss">
+
+        <link rel="alternate" type="application/rss+xml" title="Javorové lístky – komentáře ke článku Tahák na syntaxi: PHP VS. Java" href="http://javorove-listky.disqus.com/tahak_na_syntaxi_php_vs_java/latest.rss">
+
+        <link rel="shortcut icon" type="image/x-icon" href="http://honzajavorek.cz/favicon.ico">
+
+        <meta name="twitter:card" content="summary">
+            <meta name="og:image" content="http://honzajavorek.cz/images/honza.jpg">
+    </head>
+    <body>
+        <div class="container article">
+<div class="site-navigation">
+    <a href="http://honzajavorek.cz/blog/" class="btn btn-primary">
+        <i class="fa fa-home"></i> Javorové lístky
+    </a>
+</div>
+
+<div class="article-container">
+    <div class="header">
+        <h1>Tahák&nbsp;na syntaxi:&nbsp;PHP&nbsp;VS. Java</h1>
+        <p class="supressed">
+            <time datetime="2008-03-30T18:05:00+02:00" pubdate>03/30/08</time>
+            <br>
+            <a href="#about">Honza Javorek</a>
+        </p>
+    </div>
+
+    <div class="content">
+        <div><p>Ano, můžeme si otevřít knihy, můžeme zkoumat <a href="http://en.wikipedia.org/wiki/PHP_syntax_and_semantics">PHP syntaxi</a> nebo <a href="http://en.wikipedia.org/wiki/Java_syntax">Java syntaxi</a> na Wikipedii, číst si v referenčních webech… Ale to je zdlouhavé. Nabízím malý tahák pro stejně konvertované jako já – z PHP na Javu. Nesnažil jsem se o nic komplexního, Javu se z toho nenaučíte. Jde jen o výčet nejzákladnějších rozdílů v syntaxi, které se mohou plést, zvláště když jsou zažité…</p>
+<div class="table-responsive"><table class="table table-bordered"><tr><th>
+            část syntaxe
+        </th>
+        <th>
+            PHP
+        </th>
+        <th>
+            Java
+        </th>
+    </tr><tr><td>
+            konstruktor
+        </td>
+        <td>
+            <code>__construct()</code>, <code>Class()</code>
+        </td>
+        <td>
+            <code>Class()</code>
+        </td>
+    </tr><tr><td>
+            toString
+        </td>
+        <td>
+            <code>$object-&gt;__toString()</code>
+        </td>
+        <td>
+            <code>object.toString()</code>
+        </td>
+    </tr><tr><td>
+            přístup ke statické proměnné/metodě
+        </td>
+        <td>
+            <code>Class::$name</code>, <code>Class::name()</code>
+        </td>
+        <td>
+            <code>Class.name</code>, <code>Class.name()</code>
+        </td>
+    </tr><tr><td>
+            přístup k vlastní statické proměnné/metodě
+        </td>
+        <td>
+            <code>self::$name</code>, <code>self::name()</code>
+        </td>
+        <td>
+            <code>name</code>, <code>Class.name</code>, <code>name()</code>, <code>Class.name()</code>
+        </td>
+    </tr><tr><td>
+            přístup k proměnné/metodě
+        </td>
+        <td>
+            <code>$object-&gt;name</code>, <code>$object-&gt;name()</code>
+        </td>
+        <td>
+            <code>object.name</code>, <code>object.name()</code>
+        </td>
+    </tr><tr><td>
+            přístup k vlastní proměnné/metodě
+        </td>
+        <td>
+            <code>$this-&gt;name</code>, <code>$this-&gt;name()</code>
+        </td>
+        <td>
+            <code>name</code>, <code>this.name</code>, <code>name()</code>, <code>this.name()</code>
+        </td>
+    </tr><tr><td>
+            (statická) konstanta
+        </td>
+        <td>
+            <code>const NAME</code>
+        </td>
+        <td>
+            <code>static final type NAME</code>
+        </td>
+    </tr><tr><td>
+            přístup ke konstantě
+        </td>
+        <td>
+            <code>self::NAME</code>, <code>Class::NAME</code>
+        </td>
+        <td>
+            <code>NAME</code>, <code>Class.NAME</code>
+        </td>
+    </tr></table></div><p>Mimochodem, když jsem hledal něco takového jako tento článek na internetu, narazil jsem na <a href="http://www.blueshoes.org/en/developer/php_cheat_sheet/">pěkný tahák pro PHP</a>.</p></div>
+    </div>
+
+        <hr>
+
+        <div id="about" class="about">
+            <h2 class="supressed">
+                    Honza Javorek
+            </h2>
+            <div class="about-box">
+                    <img src="http://honzajavorek.cz/images/honza.jpg" class="about-image img-rounded">
+                <div class="about-text">
+                    <p><a href="http://honzajavorek.cz">Honza</a> je programátor. Od roku 2011 buduje českou
+komunitu kolem jazyka <a href="http://python.cz/">Python</a>. V současnosti pomáhá hlavně s
+propagací aktivit, jako jsou <a href="http://pyladies.cz/">PyLadies</a>,
+<a href="http://pyvo.cz/">Pyvo</a>, nebo <a href="https://cz.pycon.org/">PyCon CZ</a>. Přes den jej
+najdete v <a href="https://apiary.io/">Apiary</a>, kde se stará o
+<a href="https://github.com/apiaryio/dredd">Dredd</a>, framework na testování API. Občas
+taky radí lidem jak mají API dělat a přednáší o tom na konferencích.</p>
+                </div>
+            </div>
+        </div>
+
+    <hr>
+
+    <div id="share" class="share">
+        <a href="//www.facebook.com/sharer.php?u=http%3A//honzajavorek.cz/blog/tahak-na-syntaxi-php-vs-java&amp;t=Javorov%C3%A9%20l%C3%ADstky%3A%20Tah%C3%A1k%20na%20syntaxi%3A%20PHP%20VS.%20Java" target="_blank" class="btn btn-primary-outline">
+            <i class="fa fa-facebook-square"></i> Facebook
+        </a>
+        <a href="//twitter.com/share?url=http%3A//honzajavorek.cz/blog/tahak-na-syntaxi-php-vs-java&amp;text=Javorov%C3%A9%20l%C3%ADstky%3A%20Tah%C3%A1k%20na%20syntaxi%3A%20PHP%20VS.%20Java" target="_blank" class="btn btn-info-outline">
+            <i class="fa fa-twitter-square"></i> Twitter
+        </a>
+    </div>
+
+        <hr>
+
+        <div class="article-comments" id="comments">
+            <div id="disqus_thread"></div>
+            <script>
+                var disqus_sitename = "javorove-listky";
+                var disqus_config = function () {
+                    this.page.identifier = "\/home\/travis\/build\/honzajavorek\/honzajavorek.cz\/content\/2008-03-30_tahak-na-syntaxi-php-vs-java.md";
+                    this.page.title = "Tah\u00e1k na syntaxi: PHP VS. Java";
+                };
+                (function() {
+                    var d = document, s = d.createElement('script');
+                    s.src = '//' + disqus_sitename + '.disqus.com/embed.js';
+                    s.setAttribute('data-timestamp', +new Date());
+                    (d.head || d.body).appendChild(s);
+                })();
+            </script>
+            <noscript>
+                <p class="noscript">Bez JavaScriptu se komentáře nezobrazí.</p>
+            </noscript>
+        </div>
+</div>
+
+    <hr>
+
+    <div id="feeds" class="feeds">
+        <a href="http://javorove-listky.disqus.com/tahak_na_syntaxi_php_vs_java/latest.rss" class="btn btn-primary-outline">
+            <i class="fa fa-feed"></i> Komentáře
+        </a>
+    </div>
+        </div>
+
+        <hr>
+
+        <div class="footer">
+            <p>© 2007—2016 <a href="http://honzajavorek.cz">Honza Javorek</a></p>
+        </div>
+
+        <script async src="//platform.twitter.com/widgets.js"></script>
+            <script>
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', "UA-1316071-6"]);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+    </body>
+</html>

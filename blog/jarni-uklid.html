@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="cs">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+        <title>Jarní úklid - Javorové lístky</title>
+
+            <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css">
+            <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Slabo+13px:400,700&amp;subset=latin,latin-ext">
+
+        <link rel="stylesheet" href="http://honzajavorek.cz/theme/css/code.css">
+        <link rel="stylesheet" href="http://honzajavorek.cz/theme/css/main.css">
+            <link rel="stylesheet" href="http://honzajavorek.cz/theme/css/site.css">
+
+                <link rel="alternate" type="application/rss+xml" title="Javorové lístky - všechny články" href="http://honzajavorek.cz/feed.xml">
+                <link rel="alternate" type="application/rss+xml" title="Javorové lístky - všechny komentáře" href="http://javorove-listky.disqus.com/latest.rss">
+
+        <link rel="alternate" type="application/rss+xml" title="Javorové lístky – komentáře ke článku Jarní úklid" href="http://javorove-listky.disqus.com/jarni_uklid/latest.rss">
+
+        <link rel="shortcut icon" type="image/x-icon" href="http://honzajavorek.cz/favicon.ico">
+
+        <meta name="twitter:card" content="summary">
+            <meta name="og:image" content="http://honzajavorek.cz/images/honza.jpg">
+    </head>
+    <body>
+        <div class="container article">
+<div class="site-navigation">
+    <a href="http://honzajavorek.cz/blog/" class="btn btn-primary">
+        <i class="fa fa-home"></i> Javorové lístky
+    </a>
+</div>
+
+<div class="article-container">
+    <div class="header">
+        <h1>Jarní úklid</h1>
+        <p class="supressed">
+            <time datetime="2012-05-30T14:28:07+02:00" pubdate>05/30/12</time>
+            <br>
+            <a href="#about">Honza Javorek</a>
+        </p>
+    </div>
+
+    <div class="content">
+        <div><p>Jak jsem <a href="http://honzajavorek.cz/blog/uz-jsi-s-tim-saskovanim-kolem-blogu-trapny">avizoval</a>, tak se stalo. Vymetl jsem na blogu pavučiny, dal jsem mu nová střívka, nový kabátek. V odkazovaném článku jsem sice psal, že to udělám večer před státnicemi, ale nakonec jsem to stihl dřív :-) Pracoval jsem na tom po malých kousíčkách několik měsíců, vždy ve volné chvilce mezi učením.</p>
+<p>Co je nového?</p>
+<ul><li>Blog je kompletně <a href="https://github.com/honzajavorek/blog">na GitHubu</a>. Nejen zdrojový kód, ale i <a href="https://github.com/honzajavorek/blog/tree/gh-pages">samotné HTML stránky</a> (využívá tedy <a href="http://pages.github.com/">GitHub Pages</a>). Můžete mi opravovat chyby v článcích posíláním <em>pull requestů</em> ;-) Taky to samozřejmě funguje i jako nezničitelná <a href="http://honzajavorek.cz/blog/jak-jsem-ublizil-svemu-denicku">záloha</a>.</li>
+<li>Adresy na RSS/Atom vedou nyní přímo na služby, které je poskytují. Tedy <a href="http://disqus.com">Disqus</a> a <a href="http://feedburner.com">Feedburner</a>. Myslím, že umístění blogu měním o dost častěji, než tyhle služby, takže jsou pro čtenáře nakonec jistějším opěrným bodem :-) Zatím by mělo fungovat přesměrování, ale nevím jak dlouho - lepší bude, když si adresy změníte ve svých čtečkách.</li>
+<li>Deníček je generován do statického HTML pomocí skvělého nástroje <a href="http://pelican.notmyidea.org">Pelican</a> (Python). To znamená, že veškerou interakci na webu obstarává JavaScript (moc jí není, jen komentáře) a že by se všechny stránky měly načítat superrychle.</li>
+<li>Vše je na nové doméně <code>honzajavorek.cz</code>. Na <code>blog.javorek.net</code> ani <code>honza.javorek.net</code> nic už nikdy nebude. Ostatně, v blízké době nejspíš zanikne celé <code>javorek.net</code>, ale to je jiná pohádka.</li>
+<li>Všechny články jsou nyní ve značkovacím jazyce <a href="daringfireball.net/projects/markdown/">Markdown</a>. Mám <a href="http://www.texy.info">Texy!</a> moc rád, ale nejsem si jistý jeho budoucností (vývoj tak nějak stojí) a jeho podpora ve světě je zcela minimální. Použít jej v Pythonu je obtížné (neříkám nemožné!) a chtít blog zmigrovat někam jinam, je to vždy velká překážka. Připravuji malý Python filtr <a href="https://github.com/honzajavorek/tipi">tipi</a>, který bude vylepšovat typografii výstupu z Markdownu podle českých pravidel.</li>
+<li>Blog je ještě jednodušší. Snažil jsem se, aby měl úplné minimum nutných funkcí. Některé jsou celkem skryté (třeba <a href="http://honzajavorek.cz/archives">archiv</a>), ale kdo hledá, najde. A kdo nehledá, tomu nepřekáží. Soustředil jsem se na <em>obsah sdělení</em>.</li>
+<li>Při stylování blogu jsem si hrál. Např. to zelené logo nahoře je v SVG. Tvořil jsem to všechno hlavně pro své potěšení. Protože mi vůbec nečiní potěšení optimalizovat pro Internet Explorer, nezobrazí se styly žádnému pod verzi 9. Kruté, ale co. Článek si návštěvník přečíst může, HTML šablona je napsána, řekl bych, sémanticky a přehledně. Stejně jako <a href="http://www.pixy.cz/pixylophone/2004_12_archiv.html#1103239648">se to kdysi dělávalo s Netscape Navigátorem</a>... Jednou se možná hecnu a pro IE to odladím. Nechtěl jsem však, aby to zdržovalo spuštění blogu. Stejně tak s tiskovými styly - tiskne si někdo mé články? Dejte mi vědět, třeba ty styly dodělám.</li>
+<li>No a narovinu říkám, že mě moc nebaví testovat mobilní zobrazení. Takže se nepřidávám do současného trendu <em>mobile first</em> nebo <em>mobile only</em>, spíš jsem se web prostě jen pocitově snažil udělat tak, abych snad kladl co nejméně klacků pod nohy. V Opeře Mini, <a href="http://localhost/blog/output/blog/proc-si-koupim-jednoduchy-telefon">kterou mám já</a>, to není <em>tak strašný</em>. Klidně napište doporučení na úpravy, jež by vám čtení na mobilu usnadnily.</li>
+<li>Komentáře mají rozhraní pořád v angličtině, protože za to polovičaté české bych se fakt styděl. Napsal jsem Disqusu, že jim tu českou verzi klidně vylepším. Uvidíme, co napíšou.</li>
+</ul><p>Nu a to je asi tak vše. Těšte se na nové články, mám při tom učení hrozný tvůrčí a myšlenkový přetlak.</p>
+<h2 id="aktualizace">Aktualizace<small class="permalink"><a href="#aktualizace" title="Trvalý odkaz na tento nadpis">#</a></small></h2>
+<p>Na základě připomínek jsem udělal následující úpravy:</p>
+<ul><li>Logo v SVG jsem nahradil jeho verzí v PNG. Svět očividně na SVG v CSS není stále připraven, nechytal se ani Chrome (vivat Firefox!).</li>
+<li>Zkusil jsem opravit fonty tak, aby se lépe zobrazovaly na Windows. Pomůže to? Nevím.</li>
+<li>Povolil jsem styly pro Internet Explorer 7 a vyšší. Prý bylo zobrazování, až na menší chybky, v pohodě.</li>
+</ul></div>
+    </div>
+
+        <hr>
+
+        <div id="about" class="about">
+            <h2 class="supressed">
+                    Honza Javorek
+            </h2>
+            <div class="about-box">
+                    <img src="http://honzajavorek.cz/images/honza.jpg" class="about-image img-rounded">
+                <div class="about-text">
+                    <p><a href="http://honzajavorek.cz">Honza</a> je programátor. Od roku 2011 buduje českou
+komunitu kolem jazyka <a href="http://python.cz/">Python</a>. V současnosti pomáhá hlavně s
+propagací aktivit, jako jsou <a href="http://pyladies.cz/">PyLadies</a>,
+<a href="http://pyvo.cz/">Pyvo</a>, nebo <a href="https://cz.pycon.org/">PyCon CZ</a>. Přes den jej
+najdete v <a href="https://apiary.io/">Apiary</a>, kde se stará o
+<a href="https://github.com/apiaryio/dredd">Dredd</a>, framework na testování API. Občas
+taky radí lidem jak mají API dělat a přednáší o tom na konferencích.</p>
+                </div>
+            </div>
+        </div>
+
+    <hr>
+
+    <div id="share" class="share">
+        <a href="//www.facebook.com/sharer.php?u=http%3A//honzajavorek.cz/blog/jarni-uklid&amp;t=Javorov%C3%A9%20l%C3%ADstky%3A%20Jarn%C3%AD%20%C3%BAklid" target="_blank" class="btn btn-primary-outline">
+            <i class="fa fa-facebook-square"></i> Facebook
+        </a>
+        <a href="//twitter.com/share?url=http%3A//honzajavorek.cz/blog/jarni-uklid&amp;text=Javorov%C3%A9%20l%C3%ADstky%3A%20Jarn%C3%AD%20%C3%BAklid" target="_blank" class="btn btn-info-outline">
+            <i class="fa fa-twitter-square"></i> Twitter
+        </a>
+    </div>
+
+        <hr>
+
+        <div class="article-comments" id="comments">
+            <div id="disqus_thread"></div>
+            <script>
+                var disqus_sitename = "javorove-listky";
+                var disqus_config = function () {
+                    this.page.identifier = "\/home\/travis\/build\/honzajavorek\/honzajavorek.cz\/content\/2012-05-30_jarni-uklid.md";
+                    this.page.title = "Jarn\u00ed \u00faklid";
+                };
+                (function() {
+                    var d = document, s = d.createElement('script');
+                    s.src = '//' + disqus_sitename + '.disqus.com/embed.js';
+                    s.setAttribute('data-timestamp', +new Date());
+                    (d.head || d.body).appendChild(s);
+                })();
+            </script>
+            <noscript>
+                <p class="noscript">Bez JavaScriptu se komentáře nezobrazí.</p>
+            </noscript>
+        </div>
+</div>
+
+    <hr>
+
+    <div id="feeds" class="feeds">
+        <a href="http://javorove-listky.disqus.com/jarni_uklid/latest.rss" class="btn btn-primary-outline">
+            <i class="fa fa-feed"></i> Komentáře
+        </a>
+    </div>
+        </div>
+
+        <hr>
+
+        <div class="footer">
+            <p>© 2007—2016 <a href="http://honzajavorek.cz">Honza Javorek</a></p>
+        </div>
+
+        <script async src="//platform.twitter.com/widgets.js"></script>
+            <script>
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', "UA-1316071-6"]);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+    </body>
+</html>

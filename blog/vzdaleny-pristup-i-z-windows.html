@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="cs">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+        <title>Vzdálený přístup i z Windows - Javorové lístky</title>
+
+            <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css">
+            <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Slabo+13px:400,700&amp;subset=latin,latin-ext">
+
+        <link rel="stylesheet" href="http://honzajavorek.cz/theme/css/code.css">
+        <link rel="stylesheet" href="http://honzajavorek.cz/theme/css/main.css">
+            <link rel="stylesheet" href="http://honzajavorek.cz/theme/css/site.css">
+
+                <link rel="alternate" type="application/rss+xml" title="Javorové lístky - všechny články" href="http://honzajavorek.cz/feed.xml">
+                <link rel="alternate" type="application/rss+xml" title="Javorové lístky - všechny komentáře" href="http://javorove-listky.disqus.com/latest.rss">
+
+        <link rel="alternate" type="application/rss+xml" title="Javorové lístky – komentáře ke článku Vzdálený přístup i z Windows" href="http://javorove-listky.disqus.com/vzdaleny_pristup_i_z_windows/latest.rss">
+
+        <link rel="shortcut icon" type="image/x-icon" href="http://honzajavorek.cz/favicon.ico">
+
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="og:description" content="Vzdálený přístup i z Windows - Javorové lístky">
+        <meta name="og:image" content="http://honzajavorek.cz/images/55.jpg">
+    </head>
+    <body>
+        <div class="container article">
+<div class="site-navigation">
+    <a href="http://honzajavorek.cz/blog/" class="btn btn-primary">
+        <i class="fa fa-home"></i> Javorové lístky
+    </a>
+</div>
+
+<div class="article-container">
+    <div class="header">
+        <h1>Vzdálený přístup&nbsp;i&nbsp;z Windows</h1>
+        <p class="supressed">
+            <time datetime="2008-03-12T13:09:00+01:00" pubdate>03/12/08</time>
+            <br>
+            <a href="#about">Honza Javorek</a>
+        </p>
+    </div>
+
+    <div class="content">
+        <div><p>Nemám Linux na počítači, nepohnul jsem CD/DVD mechanikou, flashka leží 30 cm od mého notebooku a přesto, přesto všechno jsem dnes na Linuxu kompiloval pár svých programů, spouštěl Firefox a četl PDF soubory. Jak jsem to dokázal? <strong>Vzdáleně jsem se připojil</strong> na školní server :) .</p>
+<h2 id="putty">PuTTY<small class="permalink"><a href="#putty" title="Trvalý odkaz na tento nadpis">#</a></small></h2>
+<p>Pokud se chce někdo <strong>z Windows připojit na Linux</strong> (či jinou mutaci UNIXu), má většinou v paměti šikovný prográmek, PuTTY. Jeden exe soubor a umí to divy. Více o PuTTY na <a href="http://www.chiark.greenend.org.uk/~sgtatham/putty/">oficiálním webu</a>. Pokud se vám zdá původní PuTTY zaprášené a ohrané, zpestřete si život jeho <strong>sexy variací</strong> <a href="http://alian.info/index.php?option=com_content&amp;task=view&amp;id=1533">PuTTY Tray</a>.</p>
+<h2 id="ssh">SSH<small class="permalink"><a href="#ssh" title="Trvalý odkaz na tento nadpis">#</a></small></h2>
+<p>Chcete se připojovat z příkazového řádku ve Windows stejně jako to děláte na Linuxu? Chcete, aby vám stačilo pouhé</p>
+<pre class="highlight"><code><span></span>ssh &lt;server&gt; -l &lt;login&gt;
+</code></pre>
+
+
+<p>a mohli jste se hned poté oddávat orgiím v bashi uprostřed vod <code>cmd.exe</code>? Nainstalujte si <a href="http://sshwindows.sourceforge.net/">SSH pro Windows</a>. Příkaz <code>ssh</code> vám potom bude fungovat jednoduše i ve vašem okenním systému. Samozřejmě nemusíte SSH využívat jen pro připojení jinam, můžete si jednoduše <a href="http://pigtail.net/LRP/printsrv/cygwin-sshd.html">podle návodu</a> rozběhat <strong>svůj SSH server</strong> na Windows a vzdáleně se třeba ze školy <strong>připojovat na svůj počítač</strong> (pokud bude zapnutý :) ).</p>
+<h2 id="cygwin">Cygwin<small class="permalink"><a href="#cygwin" title="Trvalý odkaz na tento nadpis">#</a></small></h2>
+<p>Nestačí? Dobrá, dobrá… Přichází na řadu zabiják všech nedostatků Windows oproti UNIXům, <strong>Cygwin</strong>. Nebudu se rozepisovat co je <a href="http://www.cygwin.com/">Cygwin</a> nebo jak se instaluje. Psali o něm <a href="http://www.root.cz/clanky/cygwin-unix-ve-windows/">na Rootu</a>, snad docela srozumitelně <a href="http://www.jakpsatweb.cz/clanky/instalace-cygwin.html">na JPW</a> a samozřejmě <a href="http://myego.cz/item/cygwin-linux-pod-windows">se o něj otřel i Radek</a>. Cygwin je zabijákem především proto, že nemusíte instalovat do Windows všechny ony UNIXové věci zvlášť. Máte <strong>jeden balík emulující UNIX</strong>, z nějž odebíráte a do nějž přidáváte prográmky pomocí jednoho <code>setup.exe</code> a netrápíte se s instalací MinGW, SSHWindows atd. Když budete šikovní na <strong>stránce výběru aplikací</strong> během instalace Cygwinu, budete mít v systému <code>make</code>, <code>gcc</code>, <code>ssh</code>…</p>
+<p>Já jsem si navíc nainstaloval Cygwin na <code>C:\UNIX</code>, hned vedle <code>C:\WINDOWS</code> a složku <code>C:\UNIX\bin</code> jsem si přidal do PATH Windows, abych mohl cygwinovské prográmky spouštět odkudkoliv.</p>
+<h2 id="cygwinx">Cygwin/X<small class="permalink"><a href="#cygwinx" title="Trvalý odkaz na tento nadpis">#</a></small></h2>
+<p>Jak jsme si ale s Cygwinem polepšili ve vzdáleném připojení? Nu, nijak zvlášť ne – <code>ssh</code> je tam stejné jako v SSHWindows. Kouzelný Cygwin však přece nabízí něco navíc. Pokud při instalaci vyberete balík s portem <a href="http://www.x.org/">Xek</a> na Cygwin, takzvaným <a href="http://x.cygwin.com/">Cygwin/X</a>, můžete se připojit <strong>graficky</strong> (jestli vám to povolí server), pomocí <a href="http://en.wikipedia.org/wiki/X_display_manager#X_Display_Manager_Control_Protocol">XDMCP</a>. <a href="http://x.cygwin.com/docs/ug/using-remote-session.html">Oficiální návod</a> je samozřejmě k dispozici, ale pokusím se to vysvětlit lidsky.</p>
+<ol><li>Na obrazovce <em>select packages</em> instalace Cygwinu klikejte na slovo <em>Default</em> u balíku X11 tak dlouho, až se místo něj objeví <em>Install</em>.</li>
+<li>Dokončíme instalaci.</li>
+<li>Spustíme si konzoli Cygwinu a zaútočíme na ni s následujícím příkazem: <code>XWin.exe -query &lt;server&gt;</code></li>
+<li>Měl by se vám začít vzdáleně spouštět desktop manager s přihlašovacím ok­nem.</li>
+</ol><p>Jak to vypadá?</p>
+<figure class="figure"><img alt="obrázek" src="http://honzajavorek.cz/images/55.jpg" class="figure-img img-fluid img-rounded"></figure><p>Popravdě, k ničemu jinému užitečnému Xka na Cygwinu využít nelze. Myslím si, že je to ale (alespoň pro mne) dostatečný přínos k jejich instalaci :) . Přeji příjemnou zábavu.</p>
+<h2 id="a-propos-co-fit">A propos, co FIT?<small class="permalink"><a href="#a-propos-co-fit" title="Trvalý odkaz na tento nadpis">#</a></small></h2>
+<p>Pro studenty FIT jen závěrečnou poznámku – osobně se mi takto graficky podařilo připojit jen na Merlina. Jiným se navíc nedaří připojovat se z míst mimo školní síť. Psal jsem e-mail administrátorům linuxových serverů a odpověď je takováto:</p>
+<blockquote>
+<p>…na eve nebezi XDMCP server, pristup na merlina je omezen na sit VUT protoze generuje znacny traffic a predevsim se jedna o nezabezpeceny datovy tok.</p>
+</blockquote>
+<p>Druhý den však přišla ještě odpověď od inženýra Lampy:</p>
+<blockquote>
+<p>Vzhledem k male bezpecnosti X protokolu a XDMCP se dnes obvykle pouziva pro vzdalene pripojeni ssh X11 forwarding.</p>
+</blockquote>
+<p>Na fórech po internetu jsem pak zjistil, jak na Cygwinu X11 forwarding rozběhat. Je to docela jednoduché…</p>
+<ol><li>V terminálu Cygwinu napíšeme <code>xstart</code>, abychom si spustili svá lokální Xka.</li>
+<li>Ve spuštěném xtermu napíšeme upravený příkaz pro SSH (přepínač -Y) <code>ssh -Y &lt;server&gt; -l &lt;login&gt;</code>.</li>
+<li>Jsme na vzdáleném serveru a můžeme spouštět grafické aplikace. Podařilo se mi na zkoušku spustit <code>xterm</code>, <code>gvim</code>, <code>firefox</code>.</li>
+</ol><p>A je to :) . Dle mého skromného názoru by toto mělo jet i mimo rozsah IP adres VUT Brno.</p></div>
+    </div>
+
+        <hr>
+
+        <div id="about" class="about">
+            <h2 class="supressed">
+                    Honza Javorek
+            </h2>
+            <div class="about-box">
+                    <img src="http://honzajavorek.cz/images/honza.jpg" class="about-image img-rounded">
+                <div class="about-text">
+                    <p><a href="http://honzajavorek.cz">Honza</a> je programátor. Od roku 2011 buduje českou
+komunitu kolem jazyka <a href="http://python.cz/">Python</a>. V současnosti pomáhá hlavně s
+propagací aktivit, jako jsou <a href="http://pyladies.cz/">PyLadies</a>,
+<a href="http://pyvo.cz/">Pyvo</a>, nebo <a href="https://cz.pycon.org/">PyCon CZ</a>. Přes den jej
+najdete v <a href="https://apiary.io/">Apiary</a>, kde se stará o
+<a href="https://github.com/apiaryio/dredd">Dredd</a>, framework na testování API. Občas
+taky radí lidem jak mají API dělat a přednáší o tom na konferencích.</p>
+                </div>
+            </div>
+        </div>
+
+    <hr>
+
+    <div id="share" class="share">
+        <a href="//www.facebook.com/sharer.php?u=http%3A//honzajavorek.cz/blog/vzdaleny-pristup-i-z-windows&amp;t=Javorov%C3%A9%20l%C3%ADstky%3A%20Vzd%C3%A1len%C3%BD%20p%C5%99%C3%ADstup%20i%20z%20Windows" target="_blank" class="btn btn-primary-outline">
+            <i class="fa fa-facebook-square"></i> Facebook
+        </a>
+        <a href="//twitter.com/share?url=http%3A//honzajavorek.cz/blog/vzdaleny-pristup-i-z-windows&amp;text=Javorov%C3%A9%20l%C3%ADstky%3A%20Vzd%C3%A1len%C3%BD%20p%C5%99%C3%ADstup%20i%20z%20Windows" target="_blank" class="btn btn-info-outline">
+            <i class="fa fa-twitter-square"></i> Twitter
+        </a>
+    </div>
+
+        <hr>
+
+        <div class="article-comments" id="comments">
+            <div id="disqus_thread"></div>
+            <script>
+                var disqus_sitename = "javorove-listky";
+                var disqus_config = function () {
+                    this.page.identifier = "\/home\/travis\/build\/honzajavorek\/honzajavorek.cz\/content\/2008-03-12_vzdaleny-pristup-i-z-windows.md";
+                    this.page.title = "Vzd\u00e1len\u00fd p\u0159\u00edstup i z Windows";
+                };
+                (function() {
+                    var d = document, s = d.createElement('script');
+                    s.src = '//' + disqus_sitename + '.disqus.com/embed.js';
+                    s.setAttribute('data-timestamp', +new Date());
+                    (d.head || d.body).appendChild(s);
+                })();
+            </script>
+            <noscript>
+                <p class="noscript">Bez JavaScriptu se komentáře nezobrazí.</p>
+            </noscript>
+        </div>
+</div>
+
+    <hr>
+
+    <div id="feeds" class="feeds">
+        <a href="http://javorove-listky.disqus.com/vzdaleny_pristup_i_z_windows/latest.rss" class="btn btn-primary-outline">
+            <i class="fa fa-feed"></i> Komentáře
+        </a>
+    </div>
+        </div>
+
+        <hr>
+
+        <div class="footer">
+            <p>© 2007—2016 <a href="http://honzajavorek.cz">Honza Javorek</a></p>
+        </div>
+
+        <script async src="//platform.twitter.com/widgets.js"></script>
+            <script>
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', "UA-1316071-6"]);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+    </body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="cs">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+        <title>Parametry Firefoxu - Javorové lístky</title>
+
+            <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css">
+            <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Slabo+13px:400,700&amp;subset=latin,latin-ext">
+
+        <link rel="stylesheet" href="http://honzajavorek.cz/theme/css/code.css">
+        <link rel="stylesheet" href="http://honzajavorek.cz/theme/css/main.css">
+            <link rel="stylesheet" href="http://honzajavorek.cz/theme/css/site.css">
+
+                <link rel="alternate" type="application/rss+xml" title="Javorové lístky - všechny články" href="http://honzajavorek.cz/feed.xml">
+                <link rel="alternate" type="application/rss+xml" title="Javorové lístky - všechny komentáře" href="http://javorove-listky.disqus.com/latest.rss">
+
+        <link rel="alternate" type="application/rss+xml" title="Javorové lístky – komentáře ke článku Parametry Firefoxu" href="http://javorove-listky.disqus.com/parametry_firefoxu/latest.rss">
+
+        <link rel="shortcut icon" type="image/x-icon" href="http://honzajavorek.cz/favicon.ico">
+
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="og:description" content="Parametry Firefoxu - Javorové lístky">
+        <meta name="og:image" content="http://honzajavorek.cz/images/37.jpg">
+    </head>
+    <body>
+        <div class="container article">
+<div class="site-navigation">
+    <a href="http://honzajavorek.cz/blog/" class="btn btn-primary">
+        <i class="fa fa-home"></i> Javorové lístky
+    </a>
+</div>
+
+<div class="article-container">
+    <div class="header">
+        <h1>Parametry Firefoxu</h1>
+        <p class="supressed">
+            <time datetime="2008-01-23T11:58:00+01:00" pubdate>01/23/08</time>
+            <br>
+            <a href="#about">Honza Javorek</a>
+        </p>
+    </div>
+
+    <div class="content">
+        <div><p><img alt="obrázek" class="right pull-xs-right img-fluid img-rounded" src="http://honzajavorek.cz/images/37.jpg">Většina z nich klikne na ikonku modrého Exploreru. Většina z nás klikne na ikonku Firefoxu. Někteří z nás spustí <a href="http://honzajavorek.cz/blog/launchy">Launchy</a> a na nic neklikají. Někteří se <a href="http://honzajavorek.cz/blog/png-a-internet-explorer">nebojí příkazového řádku</a>.</p>
+<p>Firefox lze spouštět i z CLI, popřípadě jej obdařit parametry v zástupci. Co tím získáme? Můžeme vynutit nějaké chování nebo použít Firefox ve skriptech pro operační systém. Parametry samozřejmě fungují jak na Linuxu, tak ve Windows:</p>
+<pre class="highlight"><code><span></span>firefox -p
+</code></pre>
+
+
+<p>Samozřejmě vám musí Firefox stát „v cestě“, čehož docílíte nejlépe tak, že před něj přidáte cestu k jeho instalaci/binárce. Ve Windows toho lze využít při tvorbě zástupců.</p>
+<h2 id="uzitecne-paramtery">Užitečné paramtery<small class="permalink"><a href="#uzitecne-paramtery" title="Trvalý odkaz na tento nadpis">#</a></small></h2>
+<ul><li><code>-profile &lt;cesta&gt;</code> spustí se s předaným profilem</li>
+<li><code>-CreateProfile &lt;název&gt; &lt;cesta&gt;</code> vytvoří nový profil</li>
+<li><code>-ProfileManager</code> spustí se se správcem profilů</li>
+<li><code>&lt;internetová adresa&gt;</code> otevře stránku</li>
+<li><code>-new-window &lt;adresa&gt;</code> spustí v novém okně</li>
+<li><code>-new-tab &lt;adresa&gt;</code> spustí v novém panelu</li>
+<li><code>-search &lt;slova&gt;</code> vyhledá slova ve výchozím vyhledávači</li>
+<li><code>-chat</code> spustí se s IRC klientem ChatZillou, pokud jej máte</li>
+<li><code>-safe-mode</code> spustí se v záchranném režimu (bez rozšíření apod.)</li>
+<li><code>-height &lt;číslo&gt;</code> spustí se s předanou výškou okna</li>
+<li><code>-width &lt;číslo&gt;</code> spustí se s předanou šířkou okna</li>
+<li><code>-setDefaultBrowser</code> Firefox se nastaví jako výchozí browser</li>
+</ul><p>Přesný seznam se všemi detaily lze samozřejmě najít <a href="http://developer.mozilla.org/en/docs/Command_Line_Options">v angličtině v dokumentaci Mozilly</a>.</p></div>
+    </div>
+
+        <hr>
+
+        <div id="about" class="about">
+            <h2 class="supressed">
+                    Honza Javorek
+            </h2>
+            <div class="about-box">
+                    <img src="http://honzajavorek.cz/images/honza.jpg" class="about-image img-rounded">
+                <div class="about-text">
+                    <p><a href="http://honzajavorek.cz">Honza</a> je programátor. Od roku 2011 buduje českou
+komunitu kolem jazyka <a href="http://python.cz/">Python</a>. V současnosti pomáhá hlavně s
+propagací aktivit, jako jsou <a href="http://pyladies.cz/">PyLadies</a>,
+<a href="http://pyvo.cz/">Pyvo</a>, nebo <a href="https://cz.pycon.org/">PyCon CZ</a>. Přes den jej
+najdete v <a href="https://apiary.io/">Apiary</a>, kde se stará o
+<a href="https://github.com/apiaryio/dredd">Dredd</a>, framework na testování API. Občas
+taky radí lidem jak mají API dělat a přednáší o tom na konferencích.</p>
+                </div>
+            </div>
+        </div>
+
+    <hr>
+
+    <div id="share" class="share">
+        <a href="//www.facebook.com/sharer.php?u=http%3A//honzajavorek.cz/blog/parametry-firefoxu&amp;t=Javorov%C3%A9%20l%C3%ADstky%3A%20Parametry%20Firefoxu" target="_blank" class="btn btn-primary-outline">
+            <i class="fa fa-facebook-square"></i> Facebook
+        </a>
+        <a href="//twitter.com/share?url=http%3A//honzajavorek.cz/blog/parametry-firefoxu&amp;text=Javorov%C3%A9%20l%C3%ADstky%3A%20Parametry%20Firefoxu" target="_blank" class="btn btn-info-outline">
+            <i class="fa fa-twitter-square"></i> Twitter
+        </a>
+    </div>
+
+        <hr>
+
+        <div class="article-comments" id="comments">
+            <div id="disqus_thread"></div>
+            <script>
+                var disqus_sitename = "javorove-listky";
+                var disqus_config = function () {
+                    this.page.identifier = "\/home\/travis\/build\/honzajavorek\/honzajavorek.cz\/content\/2008-01-23_parametry-firefoxu.md";
+                    this.page.title = "Parametry Firefoxu";
+                };
+                (function() {
+                    var d = document, s = d.createElement('script');
+                    s.src = '//' + disqus_sitename + '.disqus.com/embed.js';
+                    s.setAttribute('data-timestamp', +new Date());
+                    (d.head || d.body).appendChild(s);
+                })();
+            </script>
+            <noscript>
+                <p class="noscript">Bez JavaScriptu se komentáře nezobrazí.</p>
+            </noscript>
+        </div>
+</div>
+
+    <hr>
+
+    <div id="feeds" class="feeds">
+        <a href="http://javorove-listky.disqus.com/parametry_firefoxu/latest.rss" class="btn btn-primary-outline">
+            <i class="fa fa-feed"></i> Komentáře
+        </a>
+    </div>
+        </div>
+
+        <hr>
+
+        <div class="footer">
+            <p>© 2007—2016 <a href="http://honzajavorek.cz">Honza Javorek</a></p>
+        </div>
+
+        <script async src="//platform.twitter.com/widgets.js"></script>
+            <script>
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', "UA-1316071-6"]);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+    </body>
+</html>

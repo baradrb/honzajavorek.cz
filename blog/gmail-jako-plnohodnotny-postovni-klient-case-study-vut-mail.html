@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="cs">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+        <title>Gmail jako plnohodnotný poštovní klient (+ case study: VUT mail) - Javorové lístky</title>
+
+            <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css">
+            <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Slabo+13px:400,700&amp;subset=latin,latin-ext">
+
+        <link rel="stylesheet" href="http://honzajavorek.cz/theme/css/code.css">
+        <link rel="stylesheet" href="http://honzajavorek.cz/theme/css/main.css">
+            <link rel="stylesheet" href="http://honzajavorek.cz/theme/css/site.css">
+
+                <link rel="alternate" type="application/rss+xml" title="Javorové lístky - všechny články" href="http://honzajavorek.cz/feed.xml">
+                <link rel="alternate" type="application/rss+xml" title="Javorové lístky - všechny komentáře" href="http://javorove-listky.disqus.com/latest.rss">
+
+        <link rel="alternate" type="application/rss+xml" title="Javorové lístky – komentáře ke článku Gmail jako plnohodnotný poštovní klient (+ case study: VUT mail)" href="http://javorove-listky.disqus.com/gmail_jako_plnohodnotny_postovni_klient_case_study_vut_mail/latest.rss">
+
+        <link rel="shortcut icon" type="image/x-icon" href="http://honzajavorek.cz/favicon.ico">
+
+        <meta name="twitter:card" content="summary">
+            <meta name="og:image" content="http://honzajavorek.cz/images/honza.jpg">
+    </head>
+    <body>
+        <div class="container article">
+<div class="site-navigation">
+    <a href="http://honzajavorek.cz/blog/" class="btn btn-primary">
+        <i class="fa fa-home"></i> Javorové lístky
+    </a>
+</div>
+
+<div class="article-container">
+    <div class="header">
+        <h1>Gmail jako plnohodnotný poštovní klient&nbsp;(+ case study:&nbsp;VUT mail)</h1>
+        <p class="supressed">
+            <time datetime="2010-01-08T02:47:00+01:00" pubdate>01/08/10</time>
+            <br>
+            <a href="#about">Honza Javorek</a>
+        </p>
+    </div>
+
+    <div class="content">
+        <div><p>Asi se shodneme na tom, že obyčejný poštovní klient jako Outlook nebo Thunderbird by měl splňovat tyto vlastnosti: Umět stahovat poštu odjinud přes <strong>POP3</strong>, být přístupný <strong>offline</strong> i se všemi daty, odesílat poštu přes jakýkoliv <strong>SMTP</strong> server. Tak <strong>Gmail tohle všechno už nějakou dobu splňuje</strong>. Navíc má rychlé a přehledné webové rozhraní. Zkusím popsat jak na to a jako case study si vezmu náš <strong>školní mail</strong>. Omlouvám se, ale pojmy z Gmailu budou v angličtině – nemám ponětí jak jsou přeloženy do češtiny a nehodlám to zjišťovat.</p>
+<p>Zadáním je využívat Gmail pro příjem, uskladnění a odesílání <a href="http://www.fit.vutbr.cz/CVT/net/email.html.cs">této školní pošty</a>. Je potřeba, aby chodila na Gmail ze školního serveru, aby byla přístupná offline a aby odesílala zprávy přes školní SMTP, protože pokud tak činit nebude, kvůli tvrdé fakultní antispamové politice pravděpodobně každý náš e-mail žadonící o bodík z předmětu navíc skončí ve věčných lovištích a nikdo si jej nikdy nepřečte (to je fakt potvrzený zaměstnanci fakulty).</p>
+<h2 id="accounts">Accounts<small class="permalink"><a href="#accounts" title="Trvalý odkaz na tento nadpis">#</a></small></h2>
+<p>Základním stavebním kamenem pro náš úkol budou Accounts. Gmail dovoluje zakládat nové Accounts, tedy hloupě přeloženo účty. Každý takový účet představuje jednu e-mailovou adresu. Můžeme si vytvořit účet pro náš e-mail na Seznamu, na Centru, Hotmailu apod. To ještě není nic moc zvláštního – nastavíme si účet pro mail na Seznamu, třeba <em><a href="mailto:usni.lalok@seznam.cz">usni.lalok@seznam.cz</a></em>, ověříme jej a Gmail nám dovolí odesílat e-maily, jež se tváří, jako by byly odeslané z <em><a href="mailto:usni.lalok@seznam.cz">usni.lalok@seznam.cz</a></em>. Zpravidla si pak ještě na tom Seznamu nastavíme automatické přeposílání na
+Gmail. <strong>Takto můžeme spoustu e-mailových schránek sdružit pod jednu v Gmailu</strong>.</p>
+<h2 id="pop3">POP3<small class="permalink"><a href="#pop3" title="Trvalý odkaz na tento nadpis">#</a></small></h2>
+<p><strong>Gmail ale dovoluje maily z takových účtů automaticky stahovat přes POP3</strong> jako jiný běžný klient. Tak můžeme napojit i účty, kde není vytvoření přeposílacího pravidla možné, jednoduché, nebo úplně žádoucí. V nastavení dokonce vidíme, kdy naposledy mail kontroloval, kolik zpráv přijal a jestli se mu to vůbec povedlo. Kliknutím na tlačítko můžeme zprávy přijmout i hned, pokud chceme proces z nějakého důvodu urychlit. Přidání POP3 účtu je intuitivní. Pro případ školního mailu nám ale POP3 moc nepomůže, protože přístup je jen přes IMAP a ten Gmail neumí.</p>
+<h2 id="preposilani">Přeposílání<small class="permalink"><a href="#preposilani" title="Trvalý odkaz na tento nadpis">#</a></small></h2>
+<p>Ve většině e-mailů je možnost <strong>přeposílat všechnu poštu někam jinam</strong>, nebo se dá alespoň nastavit takový filtr, který ovlivní všechny příchozí e-maily (ať už je to třeba podmínkou „předmět neobsahuje slovo <em>b\~v\~d\~ď\~g\~h\~z\~ž</em>“, kterou projdou všechny) a pošle je jinam. Školní mail ale nic takového nenabízí, ani ve svém <a href="https://email.fit.vutbr.cz/">webovém rozhraní</a>. Co s tím? No existuje trochu hackerské řešení: Přihlašte se na libovolný školní server a do svého <em>home</em> dejte soubor <code>.procmailrc</code> s následujícím
+obsahem:</p>
+<pre class="highlight"><code><span></span>:0 * !^FROM_MAILER ! lalok@gmail.com
+</code></pre>
+
+
+<p>Tento kód zajistí, že všechna vaše pošta bude automaticky přeposílána na váš Gmailový účet <em><a href="mailto:lalok@gmail.com">lalok@gmail.com</a></em>.</p>
+<h2 id="reply-to">Reply-To<small class="permalink"><a href="#reply-to" title="Trvalý odkaz na tento nadpis">#</a></small></h2>
+<p>Ke každému Accountu si můžeme nastavit tzv. <strong>reply-to</strong>, tedy e-mail, na který má dojít odpověd k mailům odeslaným z adresy tohoto Accountu. Bude většinou stejný, ale můžeme chtít takovým způsobem naznačit přátelům, že starý e-mail už nepoužíváme. Odešleme jim mail z <em><a href="mailto:usni.lalok@seznam.cz">usni.lalok@seznam.cz</a></em>, ale když dají odpovědět, jejich mail půjde automaticky na <em><a href="mailto:lalok@gmail.com">lalok@gmail.com</a></em>, pokud si to nastavíme. Takové srandy jde nastavit i globálně pro celý mail (<em>When receiving a message: Reply from the same address the message was sent to / Always reply from default address</em>), přičemž odchozí adresu si můžeme stejně kdykoliv explicitně vybrat při psaní mailu.</p>
+<h2 id="smtp">SMTP<small class="permalink"><a href="#smtp" title="Trvalý odkaz na tento nadpis">#</a></small></h2>
+<p>Velmi důležitou možností je <strong>nastavení vlastního SMTP</strong>. Bez něj nám sice vše bude fungovat po teoretické stránce – maily ze školy přijdou na náš Gmail, tam budeme mít nastavené, aby se tvářil jako <em><a href="mailto:xlalok00@stud.fit.vutbr.cz">xlalok00@stud.fit.vutbr.cz</a></em> a on bude vesele pod touto adresou e-maily odesílat. Jenže problém je v tom, že školní servery v praxi stejně <strong>rozeznají, že zpráva není odeslána z VUT</strong> a mohou ji nekompromisně skartovat. Proto musíme e-maily posílat přes školní server k tomu určený – Evu. Potřebné nastavení je <a href="http://www.fit.vutbr.cz/CVT/net/email.html.cs">zde</a>, ale kam ho v Gmailu dát? Dříve to vůbec nešlo, nyní to ale Gmail už umí. Nejsem si jistý, ale mám dojem, že tu funkci spustil bez jakékoliv slávy. Prostě se tam jednoho dne objevila, já si jí za půl roku všiml a jásal jsem. Tak tedy SMTP lze nastavit pro každý Account zvlášť. Zeptá se vás <em>Send mail through your SMTP server?</em> a dá na výběr z posílání přes něj, nebo použití vlastního SMTP. Vyberte vlastní a napište tam údaje pro Evu.</p>
+<h2 id="offline-pristup">Offline přístup<small class="permalink"><a href="#offline-pristup" title="Trvalý odkaz na tento nadpis">#</a></small></h2>
+<p>Já osobně <strong>offline přístup</strong> nevyžaduji, ale Gmail jej podporuje a zkoušel jsem, jde to. Pokud nutně potřebujete poštu i někde na cestách, nainstalujte si <a href="http://gears.google.com/">Google Gears</a> a v pravém horním rožku Gmailu si ikonkou nechte synchronizovat obsah e-mailu s diskem. Zabere vám to nějaké místo (pokud máte v Gmailu gigabajty pošty, tak gigabajty) a bude to chvíli trvat, ale inkrementální změny jsou potom už plynulé.</p>
+<h2 id="gmail-jako-klient">Gmail jako klient<small class="permalink"><a href="#gmail-jako-klient" title="Trvalý odkaz na tento nadpis">#</a></small></h2>
+<p>Tento článek neměl být ani tak o tom, že Gmail je lepší klient než Outlook nebo Thunderbird. Měl představit některé jeho <strong>méně známé funkce</strong> a vypíchnout, že z Gmailu jde udělat <strong>terminál</strong> se stejnou základní funkčností jako zmíněné programy a to včetně toho SMTP. Snažil jsem se to pojmout i jako <strong>návod, jak integrovat školní poštu do Gmailu</strong> a snad se to povedlo srozumitelně. Pokud někomu nevyhovuje Gmail nebo vůbec nějaká webová rozhraní, tak se tímhle vším samozřejmě vůbec nezabývejte. Mě vyhovuje Gmail, takže chci mít všechno v něm.</p>
+<p>Nezapomeňte, že Gmail má nejvíce funkcí ve své <strong>US English</strong> jazykové verzi. Nové funkce se šíří do ostatních jazyků pomalu a to až tehdy, kdy jsou zcela přeloženy. Je tedy možné, že v českém Gmailu ani žádné SMTP není.</p></div>
+    </div>
+
+        <hr>
+
+        <div id="about" class="about">
+            <h2 class="supressed">
+                    Honza Javorek
+            </h2>
+            <div class="about-box">
+                    <img src="http://honzajavorek.cz/images/honza.jpg" class="about-image img-rounded">
+                <div class="about-text">
+                    <p><a href="http://honzajavorek.cz">Honza</a> je programátor. Od roku 2011 buduje českou
+komunitu kolem jazyka <a href="http://python.cz/">Python</a>. V současnosti pomáhá hlavně s
+propagací aktivit, jako jsou <a href="http://pyladies.cz/">PyLadies</a>,
+<a href="http://pyvo.cz/">Pyvo</a>, nebo <a href="https://cz.pycon.org/">PyCon CZ</a>. Přes den jej
+najdete v <a href="https://apiary.io/">Apiary</a>, kde se stará o
+<a href="https://github.com/apiaryio/dredd">Dredd</a>, framework na testování API. Občas
+taky radí lidem jak mají API dělat a přednáší o tom na konferencích.</p>
+                </div>
+            </div>
+        </div>
+
+    <hr>
+
+    <div id="share" class="share">
+        <a href="//www.facebook.com/sharer.php?u=http%3A//honzajavorek.cz/blog/gmail-jako-plnohodnotny-postovni-klient-case-study-vut-mail&amp;t=Javorov%C3%A9%20l%C3%ADstky%3A%20Gmail%20jako%20plnohodnotn%C3%BD%20po%C5%A1tovn%C3%AD%20klient%20%28%2B%20case%20study%3A%20VUT%20mail%29" target="_blank" class="btn btn-primary-outline">
+            <i class="fa fa-facebook-square"></i> Facebook
+        </a>
+        <a href="//twitter.com/share?url=http%3A//honzajavorek.cz/blog/gmail-jako-plnohodnotny-postovni-klient-case-study-vut-mail&amp;text=Javorov%C3%A9%20l%C3%ADstky%3A%20Gmail%20jako%20plnohodnotn%C3%BD%20po%C5%A1tovn%C3%AD%20klient%20%28%2B%20case%20study%3A%20VUT%20mail%29" target="_blank" class="btn btn-info-outline">
+            <i class="fa fa-twitter-square"></i> Twitter
+        </a>
+    </div>
+
+        <hr>
+
+        <div class="article-comments" id="comments">
+            <div id="disqus_thread"></div>
+            <script>
+                var disqus_sitename = "javorove-listky";
+                var disqus_config = function () {
+                    this.page.identifier = "\/home\/travis\/build\/honzajavorek\/honzajavorek.cz\/content\/2010-01-08_gmail-jako-plnohodnotny-postovni-klient-case-study-vut-mail.md";
+                    this.page.title = "Gmail jako plnohodnotn\u00fd po\u0161tovn\u00ed klient (+ case study: VUT mail)";
+                };
+                (function() {
+                    var d = document, s = d.createElement('script');
+                    s.src = '//' + disqus_sitename + '.disqus.com/embed.js';
+                    s.setAttribute('data-timestamp', +new Date());
+                    (d.head || d.body).appendChild(s);
+                })();
+            </script>
+            <noscript>
+                <p class="noscript">Bez JavaScriptu se komentáře nezobrazí.</p>
+            </noscript>
+        </div>
+</div>
+
+    <hr>
+
+    <div id="feeds" class="feeds">
+        <a href="http://javorove-listky.disqus.com/gmail_jako_plnohodnotny_postovni_klient_case_study_vut_mail/latest.rss" class="btn btn-primary-outline">
+            <i class="fa fa-feed"></i> Komentáře
+        </a>
+    </div>
+        </div>
+
+        <hr>
+
+        <div class="footer">
+            <p>© 2007—2016 <a href="http://honzajavorek.cz">Honza Javorek</a></p>
+        </div>
+
+        <script async src="//platform.twitter.com/widgets.js"></script>
+            <script>
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', "UA-1316071-6"]);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+    </body>
+</html>

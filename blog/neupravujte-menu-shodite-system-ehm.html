@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="cs">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+        <title>Neupravujte menu, shodíte systém... ehm - Javorové lístky</title>
+
+            <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css">
+            <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Slabo+13px:400,700&amp;subset=latin,latin-ext">
+
+        <link rel="stylesheet" href="http://honzajavorek.cz/theme/css/code.css">
+        <link rel="stylesheet" href="http://honzajavorek.cz/theme/css/main.css">
+            <link rel="stylesheet" href="http://honzajavorek.cz/theme/css/site.css">
+
+                <link rel="alternate" type="application/rss+xml" title="Javorové lístky - všechny články" href="http://honzajavorek.cz/feed.xml">
+                <link rel="alternate" type="application/rss+xml" title="Javorové lístky - všechny komentáře" href="http://javorove-listky.disqus.com/latest.rss">
+
+        <link rel="alternate" type="application/rss+xml" title="Javorové lístky – komentáře ke článku Neupravujte menu, shodíte systém... ehm" href="http://javorove-listky.disqus.com/neupravujte_menu_shodite_system_ehm/latest.rss">
+
+        <link rel="shortcut icon" type="image/x-icon" href="http://honzajavorek.cz/favicon.ico">
+
+        <meta name="twitter:card" content="summary">
+            <meta name="og:image" content="http://honzajavorek.cz/images/honza.jpg">
+    </head>
+    <body>
+        <div class="container article">
+<div class="site-navigation">
+    <a href="http://honzajavorek.cz/blog/" class="btn btn-primary">
+        <i class="fa fa-home"></i> Javorové lístky
+    </a>
+</div>
+
+<div class="article-container">
+    <div class="header">
+        <h1>Neupravujte menu, shodíte systém...&nbsp;ehm</h1>
+        <p class="supressed">
+            <time datetime="2010-09-12T10:31:00+02:00" pubdate>09/12/10</time>
+            <br>
+            <a href="#about">Honza Javorek</a>
+        </p>
+    </div>
+
+    <div class="content">
+        <div><p>Jelikož mě <a href="http://honzajavorek.cz/blog/kdyz-je-na-disku-malo-mista">předchozí geekovina</a> od té doby co jsem ji napsal asi tak 10× znova zachránila, padám sem honem napsat další.</p>
+<p>Nevěřili byste, kam se můžete v GNOME dostat pouhou editací menu. Přestože mám GNOME a Linux rád, nebudu zastírat, že tohle je naprostá idiocie systému. Od začátku: Zdálo se mi, že nemám menu pro aplikace až tolik hezké a že bych mohl pár položek přejmenovat a nějaké vyházet. To jsem udělal a následně mi zkolaboval systém a při spuštění se nenačtaly okraje okýnek. Nedařilo se mi za boha najít příčinu, restartoval jsem několikrát celý okenní manažer, Metacity, přeinstalovával co se dalo. Bez reakce. Jediné co pomáhalo bylo dát Metacity do programů po spuštění, ale to bylo dost blbé řešení, něco jako kdybych díru na autě zalepil izolepou.</p>
+<p>Nebudu vás napínat, po ztracené hodině času jsem <a href="http://ubuntuforums.org/showpost.php?p=7610738&amp;postcount=4">našel na fórech problém</a> který jasně říká, že když se v menu odstraní ty špatné věci, tak se přesně tohle stane. Smazal jsem nějaká lokální nastavení v <code>~</code> a najednou se to rozjelo… Uff… WTF?!</p>
+<p>Protože se tím menu vrátilo do zcela prehistorického stavu a spolu s ním se <em>vyčistilo</em> i menu od Wine, tady je příkaz, kterým lze win aplikace do menu vrátit:</p>
+<pre class="highlight"><code><span></span><span class="x">export WINEPREFIX=~/.wine; find </span><span class="p">$</span><span class="nv">WINEPREFIX</span><span class="x">/drive_c/ -name "*.lnk" -exec wine winemenubuilder '</span><span class="err">{</span><span class="x">}' \;</span>
+</code></pre>
+
+
+<p>Našel jsem ho <a href="http://forum.winehq.org/viewtopic.php?t=3769">tady</a>. To se nehodí jen v těchto krizových případech, ale kdykoliv se vám povede přes editor menu to Wine menu rozkopat.</p>
+<p>Závěr: Mezi Windows a Linuxem žádný rozdíl není. Co vás nenasere v jednom, nasere vás v druhém. Prašť jak uhoď. Ale Linux je zadarmo, líp se v něm programuje a má hezčí okýnka :D</p></div>
+    </div>
+
+        <hr>
+
+        <div id="about" class="about">
+            <h2 class="supressed">
+                    Honza Javorek
+            </h2>
+            <div class="about-box">
+                    <img src="http://honzajavorek.cz/images/honza.jpg" class="about-image img-rounded">
+                <div class="about-text">
+                    <p><a href="http://honzajavorek.cz">Honza</a> je programátor. Od roku 2011 buduje českou
+komunitu kolem jazyka <a href="http://python.cz/">Python</a>. V současnosti pomáhá hlavně s
+propagací aktivit, jako jsou <a href="http://pyladies.cz/">PyLadies</a>,
+<a href="http://pyvo.cz/">Pyvo</a>, nebo <a href="https://cz.pycon.org/">PyCon CZ</a>. Přes den jej
+najdete v <a href="https://apiary.io/">Apiary</a>, kde se stará o
+<a href="https://github.com/apiaryio/dredd">Dredd</a>, framework na testování API. Občas
+taky radí lidem jak mají API dělat a přednáší o tom na konferencích.</p>
+                </div>
+            </div>
+        </div>
+
+    <hr>
+
+    <div id="share" class="share">
+        <a href="//www.facebook.com/sharer.php?u=http%3A//honzajavorek.cz/blog/neupravujte-menu-shodite-system-ehm&amp;t=Javorov%C3%A9%20l%C3%ADstky%3A%20Neupravujte%20menu%2C%20shod%C3%ADte%20syst%C3%A9m...%20ehm" target="_blank" class="btn btn-primary-outline">
+            <i class="fa fa-facebook-square"></i> Facebook
+        </a>
+        <a href="//twitter.com/share?url=http%3A//honzajavorek.cz/blog/neupravujte-menu-shodite-system-ehm&amp;text=Javorov%C3%A9%20l%C3%ADstky%3A%20Neupravujte%20menu%2C%20shod%C3%ADte%20syst%C3%A9m...%20ehm" target="_blank" class="btn btn-info-outline">
+            <i class="fa fa-twitter-square"></i> Twitter
+        </a>
+    </div>
+
+        <hr>
+
+        <div class="article-comments" id="comments">
+            <div id="disqus_thread"></div>
+            <script>
+                var disqus_sitename = "javorove-listky";
+                var disqus_config = function () {
+                    this.page.identifier = "\/home\/travis\/build\/honzajavorek\/honzajavorek.cz\/content\/2010-09-12_neupravujte-menu-shodite-system-ehm.md";
+                    this.page.title = "Neupravujte menu, shod\u00edte syst\u00e9m... ehm";
+                };
+                (function() {
+                    var d = document, s = d.createElement('script');
+                    s.src = '//' + disqus_sitename + '.disqus.com/embed.js';
+                    s.setAttribute('data-timestamp', +new Date());
+                    (d.head || d.body).appendChild(s);
+                })();
+            </script>
+            <noscript>
+                <p class="noscript">Bez JavaScriptu se komentáře nezobrazí.</p>
+            </noscript>
+        </div>
+</div>
+
+    <hr>
+
+    <div id="feeds" class="feeds">
+        <a href="http://javorove-listky.disqus.com/neupravujte_menu_shodite_system_ehm/latest.rss" class="btn btn-primary-outline">
+            <i class="fa fa-feed"></i> Komentáře
+        </a>
+    </div>
+        </div>
+
+        <hr>
+
+        <div class="footer">
+            <p>© 2007—2016 <a href="http://honzajavorek.cz">Honza Javorek</a></p>
+        </div>
+
+        <script async src="//platform.twitter.com/widgets.js"></script>
+            <script>
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', "UA-1316071-6"]);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+    </body>
+</html>
